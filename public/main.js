@@ -16,16 +16,16 @@ const cardNumb = [
   'King'
 ]
 
-const fulldeck = () => {
-  let deck =[]
-  for(let a = 0; a < suits.length; a++)
-  {
-    for(let b = 0; b < cardNumb.length; b++)
-    {
-      let card =
+const main = () => {
+  let deck = []
+  for (let a = 0; a < suits.length; a++) {
+    for (let b = 0; b < cardNumb.length; b++) {
+      deck.push(cardNumb[b] + ' ' + 'of' + ' ' + suits[a])
     }
   }
 }
+
+const shuffle = () => {}
 
 /*
 for (let i = 0; cardNumb.length; i++) {
