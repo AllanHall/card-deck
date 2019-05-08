@@ -21,3 +21,8 @@ h1 {
   margin-right: 40%;
   min-height: 20rem;
 }
+
+button {
+  display: block;
+  margin: 0 auto;
+}

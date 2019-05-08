@@ -19,19 +19,29 @@ const cardNumb = [
 const main = () => {
   let deck = []
   for (let i = 0; i < suits.length; i++) {
-    for (let b = 0; b < cardNumb.length; b++) {
-      deck.push(cardNumb[b] + ' ' + 'of' + ' ' + suits[i])
+    for (let j = 0; j < cardNumb.length; j++) {
+      deck.push(cardNumb[j] + ' ' + 'of' + ' ' + suits[i])
     }
+    shuffle()
   }
+
+
 /*  for (let c = 0; c < deck.length; c++) {
     const cardValue = document.createElement('p')
     cardValue.textContent = deck[c]
     document.querySelector('.card').appendChild(cardValue)
   }
-}
 */
 
-const shuffle = () => {}
-
+const shuffle = () => {
+  let a
+  let b 
+  let c = deck.length
+  while (c) {
+    a = Math.floor(Math.random() * c--)
+    b = deck[c]
+    deck[c] = deck[a]
+    deck[a] = b
+}
 
 document.addEventListener('DOMContentLoaded', main)
