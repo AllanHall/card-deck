@@ -22,7 +22,12 @@ h1 {
   min-height: 20rem;
 }
 
-button {
+.card-display {
+  text-align: center;
+}
+
+.button {
   display: block;
   margin: 0 auto;
+  margin-top: 1rem;
 }
