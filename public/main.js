@@ -22,17 +22,12 @@ const main = () => {
     for (let j = 0; j < cardNumb.length; j++) {
       deck.push(cardNumb[j] + ' ' + 'of' + ' ' + suits[i])
     }
-    shuffle()
   }
-
-
-/*  for (let c = 0; c < deck.length; c++) {
-    const cardValue = document.createElement('p')
-    cardValue.textContent = deck[c]
-    document.querySelector('.card').appendChild(cardValue)
+  shuffle()
+  drawCard = Math.ceil(Math.random() * deck)
+  document.querySelector('.card-display').textContent = drawCard
   }
-*/
-
+  
 const shuffle = () => {
   let a
   let b 
@@ -45,3 +40,4 @@ const shuffle = () => {
 }
 
 document.addEventListener('DOMContentLoaded', main)
+document.querySelector('button').addEventListener('click', main)
